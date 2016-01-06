@@ -1,0 +1,377 @@
+{% extends "base.html" %} {% block content %}
+
+<section id="content">
+	<div class="container">
+		<div class="card" id="profile-main">
+			<div class="pmb-block clearfix">
+				<div class="pmbb-header">
+					<h2><i class="zmdi zmdi-equalizer m-r-5"></i>全部</h2>
+				</div>
+				<div id="totaltable-header" class="bootgrid-header container-fluid m-0 p-0">
+					<div class="row">
+						<div class=" col-sm-12">
+							<button class="btn btn-danger pull-right btn-lg m-b-10 m-r-10 submitbtn waves-effect" id="totalSearch">搜索</button>
+							<div class="form-group fg-line  showtime  col-sm-3 pull-right">
+								<!--<label for="exampleInputEmail1">结束时间</label>-->
+								<input type="text" class="form-control " placeholder="2014年2月13日 23:23" id="totalend">
+							</div>
+							<div class="form-group fg-line  showtime  col-sm-3 m-0 pull-right">
+								<!--<label for="exampleInputEmail1">开始时间</label>-->
+								<input type="text" class="form-control " placeholder="2014年2月13日 23:23" id="totalbegin">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pmbb-body p-l-30">
+					<div class="pmbb-view">
+						<div class="table-responsive" tabindex="0" style="overflow: hidden; outline: none;">
+							<table id="totaltable" class="table table-striped table-vmiddle" aria-busy="false">
+								<thead>
+									<tr>
+										<th data-column-id="date" data-formatter="kdate">日期</th>
+										<th>推送数</th>
+										<th>送达数</th>
+										<th>点击数</th>
+									</tr>
+								</thead>
+								<tbody id="totalbody">
+									
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!--IOS-->
+			<div class="pmb-block clearfix">
+				<div class="pmbb-header">
+					<h2><i class="zmdi zmdi-equalizer m-r-5"></i>IOS</h2>
+				</div>
+				<div id="IOStable-header" class="bootgrid-header container-fluid m-0 p-0">
+					<div class="row">
+						<div class=" col-sm-12">
+							<button class="btn btn-danger pull-right btn-lg m-b-10 m-r-10 submitbtn waves-effect" id="IOSSearch">搜索</button>
+							<div class="form-group fg-line  showtime  col-sm-3 pull-right">
+								<!--<label for="exampleInputEmail1">结束时间</label>-->
+								<input type="text" class="form-control " placeholder="2014年2月13日 23:23" id="IOSend">
+							</div>
+							<div class="form-group fg-line  showtime  col-sm-3 m-0 pull-right">
+								<!--<label for="exampleInputEmail1">开始时间</label>-->
+								<input type="text" class="form-control " placeholder="2014年2月13日 23:23" id="IOSbegin">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pmbb-body p-l-30">
+					<div class="pmbb-view">
+						<div class="table-responsive" tabindex="0" style="overflow: hidden; outline: none;">
+							<table id="IOStable" class="table table-striped table-vmiddle" aria-busy="false">
+								<thead>
+									<tr>
+										<th data-column-id="date" data-formatter="kdate">日期</th>
+										<th>推送数</th>
+										<th>送达数</th>
+										<th>点击数</th>
+									</tr>
+								</thead>
+								<tbody id="IOSbody">
+									
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!--友盟-->
+			<div class="pmb-block clearfix">
+				<div class="pmbb-header">
+					<h2><i class="zmdi zmdi-equalizer m-r-5"></i>友盟</h2>
+				</div>
+				<div id="umengtable-header" class="bootgrid-header container-fluid m-0 p-0">
+					<div class="row">
+						<div class=" col-sm-12">
+							<button class="btn btn-danger pull-right btn-lg m-b-10 m-r-10 submitbtn waves-effect" id="umengSearch">搜索</button>
+							<div class="form-group fg-line  showtime  col-sm-3 pull-right">
+								<!--<label for="exampleInputEmail1">结束时间</label>-->
+								<input type="text" class="form-control " placeholder="2014年2月13日 23:23" id="umengend">
+							</div>
+							<div class="form-group fg-line  showtime  col-sm-3 m-0 pull-right">
+								<!--<label for="exampleInputEmail1">开始时间</label>-->
+								<input type="text" class="form-control " placeholder="2014年2月13日 23:23" id="umengbegin">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pmbb-body p-l-30">
+					<div class="pmbb-view">
+						<div class="table-responsive" tabindex="0" style="overflow: hidden; outline: none;">
+							<table id="umengtable" class="table table-striped table-vmiddle" aria-busy="false">
+								<thead>
+									<tr>
+										<th data-column-id="date" data-formatter="kdate">日期</th>
+										<th>推送数</th>
+										<th>送达数</th>
+										<th>点击数</th>
+									</tr>
+								</thead>
+								<tbody id="umengbody">
+									
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!--小米-->
+			<div class="pmb-block clearfix">
+				<div class="pmbb-header">
+					<h2><i class="zmdi zmdi-equalizer m-r-5"></i>小米</h2>
+				</div>
+				<div id="XMtable-header" class="bootgrid-header container-fluid m-0 p-0">
+					<div class="row">
+						<div class=" col-sm-12">
+							<button class="btn btn-danger pull-right btn-lg m-b-10 m-r-10 submitbtn waves-effect" id="XMSearch">搜索</button>
+							<div class="form-group fg-line  showtime  col-sm-3 pull-right">
+								<!--<label for="exampleInputEmail1">结束时间</label>-->
+								<input type="text" class="form-control " placeholder="2014年2月13日 23:23" id="XMend">
+							</div>
+							<div class="form-group fg-line  showtime  col-sm-3 m-0 pull-right">
+								<!--<label for="exampleInputEmail1">开始时间</label>-->
+								<input type="text" class="form-control " placeholder="2014年2月13日 23:23" id="XMbegin">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pmbb-body p-l-30">
+					<div class="pmbb-view">
+						<div class="table-responsive" tabindex="0" style="overflow: hidden; outline: none;">
+							<table id="XMtable" class="table table-striped table-vmiddle" aria-busy="false">
+								<thead>
+									<tr>
+										<th data-column-id="date" data-formatter="kdate">日期</th>
+										<th>推送数</th>
+										<th>送达数</th>
+										<th>点击数</th>
+									</tr>
+								</thead>
+								<tbody id="XMbody">
+									
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!--个推-->
+			<div class="pmb-block clearfix">
+				<div class="pmbb-header">
+					<h2><i class="zmdi zmdi-equalizer m-r-5"></i>个推</h2>
+				</div>
+				<div id="getuitable-header" class="bootgrid-header container-fluid m-0 p-0">
+					<div class="row">
+						<div class=" col-sm-12">
+							<button class="btn btn-danger pull-right btn-lg m-b-10 m-r-10 submitbtn waves-effect" id="getuiSearch">搜索</button>
+							<div class="form-group fg-line  showtime  col-sm-3 pull-right">
+								<!--<label for="exampleInputEmail1">结束时间</label>-->
+								<input type="text" class="form-control " placeholder="2014年2月13日 23:23" id="getuiend">
+							</div>
+							<div class="form-group fg-line  showtime  col-sm-3 m-0 pull-right">
+								<!--<label for="exampleInputEmail1">开始时间</label>-->
+								<input type="text" class="form-control " placeholder="2014年2月13日 23:23" id="getuibegin">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pmbb-body p-l-30">
+					<div class="pmbb-view">
+						<div class="table-responsive" tabindex="0" style="overflow: hidden; outline: none;">
+							<table id="getuitable" class="table table-striped table-vmiddle" aria-busy="false">
+								<thead>
+									<tr>
+										<th data-column-id="date" data-formatter="kdate">日期</th>
+										<th>推送数</th>
+										<th>送达数</th>
+										<th>点击数</th>
+									</tr>
+								</thead>
+								<tbody id="getuibody">
+									
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+</section>
+
+<footer id="footer">
+	Copyright &copy; 2015 口袋学习
+
+	<ul class="f-menu">
+		<li><a href="">Home</a></li>
+		<li><a href="">Dashboard</a></li>
+		<li><a href="">Reports</a></li>
+		<li><a href="">Support</a></li>
+		<li><a href="">Contact</a></li>
+	</ul>
+</footer>
+
+<!-- Older IE warning message -->
+<!--[if lt IE 9]>
+            <div class="ie-warning">
+                <h1 class="c-white">Warning!!</h1>
+                <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+                <div class="iew-container">
+                    <ul class="iew-download">
+                        <li>
+                            <a href="http://www.google.com/chrome/">
+                                <img src="img/browsers/chrome.png" alt="">
+                                <div>Chrome</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.mozilla.org/en-US/firefox/new/">
+                                <img src="img/browsers/firefox.png" alt="">
+                                <div>Firefox</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.opera.com">
+                                <img src="img/browsers/opera.png" alt="">
+                                <div>Opera</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.apple.com/safari/">
+                                <img src="img/browsers/safari.png" alt="">
+                                <div>Safari</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                                <img src="img/browsers/ie.png" alt="">
+                                <div>IE (New)</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <p>Sorry for the inconvenience!</p>
+            </div>   
+        <![endif]-->
+
+<!-- Javascript Libraries -->
+<script src="{{ url_for('static', filename='vendors/bower_components/jquery/dist/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendors/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+
+<script src="{{ url_for('static', filename='vendors/bower_components/flot/jquery.flot.js') }}"></script>
+<script src="{{ url_for('static', filename='vendors/bower_components/flot/jquery.flot.resize.js') }}"></script>
+<script src="{{ url_for('static', filename='vendors/bower_components/flot.curvedlines/curvedLines.js') }}"></script>
+<script src="{{ url_for('static', filename='vendors/sparklines/jquery.sparkline.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendors/bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js') }}"></script>
+
+<script src="{{ url_for('static', filename='vendors/bower_components/moment/min/moment.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendors/bower_components/fullcalendar/dist/fullcalendar.min.js') }} "></script>
+<script src="{{ url_for('static', filename='vendors/bower_components/simpleWeather/jquery.simpleWeather.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendors/bower_components/jquery.nicescroll/jquery.nicescroll.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendors/bower_components/Waves/dist/waves.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendors/bootstrap-growl/bootstrap-growl.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendors/bootgrid/jquery.bootgrid.js') }}"></script>
+<!-- Placeholder for IE9 -->
+<!--[if IE 9 ]>
+        <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+    <![endif]-->
+
+<script src="{{ url_for('static', filename='js/flot-charts/curved-line-chart.js') }}"></script>
+<script src="{{ url_for('static', filename='js/flot-charts/line-chart.js') }}"></script>
+<script src="{{ url_for('static', filename='js/charts.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/charts.js') }}"></script>
+<script src="{{ url_for('static', filename='js/functions.js') }}"></script>
+<script src="{{ url_for('static', filename='js/demo.js') }}"></script>
+<script src="{{ url_for('static', filename='js/fun.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.datetimepicker.js') }}"></script>
+<script src="{{ url_for('static', filename='js/business/pushlist.js') }}"></script>
+<script>
+	$("#data-table-command").bootgrid({
+		css: {
+			icon: 'zmdi icon',
+			iconColumns: 'zmdi-view-module',
+			iconDown: 'zmdi-expand-more',
+			iconRefresh: 'zmdi-refresh',
+			iconUp: 'zmdi-expand-less'
+		},
+		//					formatters: {
+		//						"kid": function(column, row)
+		//						{
+		//							return "<a href=\"knowledge.html\">" + row.id + "</a>";
+		//						},
+		//						"kname": function(column, row)
+		//						{
+		//							return "<a href=\"knowledge.html\">" + row.kname + "</a>";
+		//						}
+		//					}
+	});
+	$('#totalbegin').datetimepicker({
+		lang: "ch", //语言选择中文
+		showSecond: true,
+		format: "Y-m-d" //格式化日期
+	});
+	$('#totalend').datetimepicker({
+		lang: "ch", //语言选择中文
+		showSecond: true,
+		format: "Y-m-d" //格式化日期
+	});
+	$('#IOSbegin').datetimepicker({
+		lang: "ch", //语言选择中文
+		showSecond: true,
+		format: "Y-m-d" //格式化日期
+	});
+	$('#IOSend').datetimepicker({
+		lang: "ch", //语言选择中文
+		showSecond: true,
+		format: "Y-m-d" //格式化日期
+	});
+	$('#umengbegin').datetimepicker({
+		lang: "ch", //语言选择中文
+		showSecond: true,
+		format: "Y-m-d" //格式化日期
+	});
+	$('#umengend').datetimepicker({
+		lang: "ch", //语言选择中文
+		showSecond: true,
+		format: "Y-m-d" //格式化日期
+	});
+		$('#XMbegin').datetimepicker({
+		lang: "ch", //语言选择中文
+		showSecond: true,
+		format: "Y-m-d" //格式化日期
+	});
+	$('#XMend').datetimepicker({
+		lang: "ch", //语言选择中文
+		showSecond: true,
+		format: "Y-m-d" //格式化日期
+	});
+		$('#getuibegin').datetimepicker({
+		lang: "ch", //语言选择中文
+		showSecond: true,
+		format: "Y-m-d" //格式化日期
+	});
+	$('#getuiend').datetimepicker({
+		lang: "ch", //语言选择中文
+		showSecond: true,
+		format: "Y-m-d" //格式化日期
+	});
+</script>
+
+{% endblock %}

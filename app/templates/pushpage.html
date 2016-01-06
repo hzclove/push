@@ -1,0 +1,236 @@
+{% extends "base.html" %} {% block content %}
+
+<section id="content">
+	<div class="container">
+		<div class="block-header">
+			<h2>推送</h2>
+		</div>
+		<div class="card">
+
+			<div class='container'>
+				<div class="row m-0 p-r-15">
+					<div class="form-group fg-line col-sm-4 m-t-10">
+						 
+						<label><input type="checkbox" id="allUser">全部用户</label>
+					</div>
+					<div class="col-sm-12">发送用户筛选</div>
+					<div class="form-group fg-line  col-sm-4">
+						<label for="exampleInputEmail1">省份</label>
+						<select class="tag-select" data-placeholder="省份" id="ProvinceSelect">
+							  
+						</select>
+					</div>
+
+					<div class="form-group fg-line  col-sm-4">
+						<label for="exampleInputEmail1">专业</label>
+						<select class="tag-select" data-placeholder="专业" id="MajorSelect">
+							 
+						</select>
+					</div>
+					<div class="form-group fg-line  col-sm-4">
+						<label  >注册状态</label>
+						<select class="tag-select" data-placeholder="选择注册状态" id="regist">
+							<option>注册</option>
+							<option>未注册</option>
+							<option>全部</option>
+						</select>
+					</div>
+					<div class="form-group fg-line  col-sm-10">
+						<label>Android版本</label>
+						<select class="tag-select"  multiple data-placeholder="选择Android版本" ID="andriodVersion">
+							
+						</select>
+					</div>
+
+					<div class="form-group fg-line  col-sm-10 ">
+						<label for="exampleInputEmail1">IOS版本</label>
+						<select class="tag-select" multiple data-placeholder="选择IOS版本" id="IOSVersion">
+						</select>
+					</div>
+					<div class="col-sm-12">课程内容</div>
+
+					<div class="form-group fg-line col-sm-10">
+						<label for="exampleInputEmail1">通知标题</label>
+						<input type="text" class="form-control input-sm"   placeholder="通知标题" id="title">
+					</div>
+					<div class="form-group fg-line col-sm-10">
+						<label for="exampleInputEmail1">通知内容</label>
+						<input type="text" class="form-control input-sm" id="descrip" placeholder="通知内容">
+					</div>
+					<div class="form-group fg-line  col-sm-4">
+						<label for="exampleInputEmail1">文章类型</label>
+						<select class="tag-select" data-placeholder="选择文章类型" id="articleType">
+							<option value="资讯">资讯</option>
+							<option value="社区">社区</option>
+							<option value="课程">课程</option>
+						</select>
+					</div>
+					 
+					<div class="form-group fg-line  col-sm-4" style="display: none;">
+						<label for="exampleInputEmail1">课程类型</label>
+						<select class="tag-select" data-placeholder="选择文章类型" id="classType">
+							<option  >直买</option>
+							<option  >录买</option>
+							<option  >直列</option>
+							<option  >直播</option>
+							<option  >直回</option>
+							<option  >录播</option>
+						</select>
+					</div>
+					<div class="form-group fg-line col-sm-4">
+						<label   id="articleId">ID</label>
+						<input type="text" class="form-control input-sm" id="artId" placeholder="ID">
+					</div>
+					
+					<div class=" col-sm-12">通知方式</div>
+					<div class="form-group fg-line col-sm-4">
+						<label for="exampleInputEmail1" style="display: block;">时效性</label>
+						<label><input type="checkbox" id="now">即时发送</label>
+						<label class="m-l-10"><input type="checkbox" id="timer">定时发送</label>
+					</div>
+					
+					<div class="form-group fg-line col-sm-4 showtime" style="display: none;">
+						<label for="exampleInputEmail1">发送时间</label>
+					 
+								<input type="text" class="form-control" placeholder="2014年2月13日 23:23" id="datetimepicker1">
+							 
+					</div>
+					<div class="form-group fg-line col-sm-4 showtime" style="display: none;">
+						<label for="exampleInputEmail1">过期时间</label>
+						<input type="text" class="form-control" placeholder="2014年2月13日 23:23" id="datetimepicker2">
+						
+					</div>
+					<button class="btn btn-danger pull-right btn-lg m-b-10 m-r-10 submitbtn">提交</button>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+</section>
+
+</section>
+
+<footer id="footer">
+	Copyright &copy; 2015 口袋学习
+
+	<ul class="f-menu">
+		<li><a href="">Home</a></li>
+		<li><a href="">Dashboard</a></li>
+		<li><a href="">Reports</a></li>
+		<li><a href="">Support</a></li>
+		<li><a href="">Contact</a></li>
+	</ul>
+</footer>
+
+<div class="showSuccess">
+
+</div>
+<!-- Older IE warning message -->
+<!--[if lt IE 9]>
+            <div class="ie-warning">
+                <h1 class="c-white">Warning!!</h1>
+                <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+                <div class="iew-container">
+                    <ul class="iew-download">
+                        <li>
+                            <a href="http://www.google.com/chrome/">
+                                <img src="img/browsers/chrome.png" alt="">
+                                <div>Chrome</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.mozilla.org/en-US/firefox/new/">
+                                <img src="img/browsers/firefox.png" alt="">
+                                <div>Firefox</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.opera.com">
+                                <img src="img/browsers/opera.png" alt="">
+                                <div>Opera</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.apple.com/safari/">
+                                <img src="img/browsers/safari.png" alt="">
+                                <div>Safari</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                                <img src="img/browsers/ie.png" alt="">
+                                <div>IE (New)</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <p>Sorry for the inconvenience!</p>
+            </div>   
+        <![endif]-->
+
+<!-- Javascript Libraries -->
+<script src="{{ url_for('static', filename='vendors/bower_components/jquery/dist/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendors/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+
+<script src="{{ url_for('static', filename='vendors/bower_components/flot/jquery.flot.js') }}"></script>
+<script src="{{ url_for('static', filename='vendors/bower_components/flot/jquery.flot.resize.js') }}"></script>
+<script src="{{ url_for('static', filename='vendors/bower_components/flot.curvedlines/curvedLines.js') }}"></script>
+<script src="{{ url_for('static', filename='vendors/sparklines/jquery.sparkline.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendors/bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js') }}"></script>
+
+<script src="{{ url_for('static', filename='vendors/bower_components/moment/min/moment.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendors/bower_components/fullcalendar/dist/fullcalendar.min.js') }} "></script>
+<script src="{{ url_for('static', filename='vendors/bower_components/simpleWeather/jquery.simpleWeather.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendors/bower_components/jquery.nicescroll/jquery.nicescroll.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendors/bower_components/Waves/dist/waves.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendors/bootstrap-growl/bootstrap-growl.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendors/chosen_v1.4.2/chosen.jquery.js') }}"></script>
+<!-- Placeholder for IE9 -->
+<!--[if IE 9 ]>
+        <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+    <![endif]-->
+
+<script src="{{ url_for('static', filename='js/flot-charts/curved-line-chart.js') }}"></script>
+<script src="{{ url_for('static', filename='js/flot-charts/line-chart.js') }}"></script>
+<script src="{{ url_for('static', filename='js/charts.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/charts.js') }}"></script>
+<script src="{{ url_for('static', filename='js/functions.js') }}"></script>
+<script src="{{ url_for('static', filename='js/demo.js') }}"></script>
+<script src="{{ url_for('static', filename='js/fun.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.datetimepicker.js') }}"></script>
+<script src="{{ url_for('static', filename='js/business/push.js') }}"></script>
+
+<script>
+	if ($('.fg-line')[0]) {
+		$('body').on('focus', '.form-control', function() {
+			$(this).closest('.fg-line').addClass('fg-toggled');
+		})
+		$('body').on('blur', '.form-control', function() {
+			var p = $(this).closest('.form-group');
+			var i = p.find('.form-control').val();
+			if (p.hasClass('fg-float')) {
+				if (i.length == 0) {
+					$(this).closest('.fg-line').removeClass('fg-toggled');
+				}
+			} else {
+				$(this).closest('.fg-line').removeClass('fg-toggled');
+			}
+		});
+	}
+	
+		$('#datetimepicker1').datetimepicker({
+		lang: "ch", //语言选择中文
+		showSecond: true,
+		format: "Y-m-d H:m" //格式化日期
+	});
+	$('#datetimepicker2').datetimepicker({
+		lang: "ch", //语言选择中文
+		showSecond: true,
+		format: "Y-m-d H:m" //格式化日期
+	});
+</script>
+
+{% endblock %}
